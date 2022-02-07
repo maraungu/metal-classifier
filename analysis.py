@@ -49,6 +49,11 @@ def bands_with_genre(df):
     df_genre = df_genre.sort_values(by=['band'])
     return df_genre
 
+def bands_songs_genre(df):
+    df_bands = bands(df)
+    df_genre = bands_with_genre(df)
+    df_bands = df_bands.merge(df_genre, on='band', how='inner')
+    return df_bands
 
 def average_blackness(df):
     df_exploded = df.explode('probabilities').reset_index(drop=True)
