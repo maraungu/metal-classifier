@@ -16411,7 +16411,7 @@ won right need want say cause fucking truth think words look tell
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So we see that indeed some top 10 bands in each genre have a pretty low wrong guess percentage (under 10%):</p>
+<p>So we see that indeed some top 10 most influential bands in each genre have a pretty low wrong guess percentage (under 10%):</p>
 <ul>
 <li>Napalm Death, Cannibal Corpse, Six Feet Under, Soilwork for death metal</li>
 <li>Marduk, Behemoth, Cradle of Filth for black metal</li>
@@ -16432,7 +16432,7 @@ won right need want say cause fucking truth think words look tell
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="The-case-of-Mayhem">The case of Mayhem<a class="anchor-link" href="#The-case-of-Mayhem">&#182;</a></h3><p>Since the project was started in order to explore the whether Mayhem's lyrics indeed belongs more to death than to black metal (at least according to a computer), let's take a closer look at what our classifier has to say about this.  First of all it has a pretty high percentage of wrong guesses on the test data set:</p>
+<h3 id="The-case-of-Mayhem">The case of Mayhem<a class="anchor-link" href="#The-case-of-Mayhem">&#182;</a></h3><p>Since the project was started in order to explore the question whether Mayhem's lyrics indeed belong more to death than to black metal (at least according to a computer), let's take a closer look at what our classifier has to say about this.  First of all it has a pretty high percentage of wrong guesses on the test data set:</p>
 
 </div>
 </div>
@@ -16518,7 +16518,7 @@ won right need want say cause fucking truth think words look tell
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So let's see what kind of Mayhem songs are not guesses correctly:</p>
+<p>So let's see what kind of Mayhem songs are not guessed correctly:</p>
 
 </div>
 </div>
@@ -16674,7 +16674,7 @@ won right need want say cause fucking truth think words look tell
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So we see that the classifier is not very sure which genre this songs are, as the death metal score tends to no t be very high.  It is however very sure that the song below (<em>Bad Blood</em> from the album <em>Daemon</em>) is a death metal song:</p>
+<p>So we see that the classifier is not very sure which genre this songs are, as the death metal score tends not to be very high.  It is however very sure that the song below (<em>Bad Blood</em> from the album <em>Daemon</em>) is a death metal song:</p>
 
 </div>
 </div>
@@ -16877,7 +16877,7 @@ won right need want say cause fucking truth think words look tell
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Looking at the lyrics, the ones in thus group have a more occult, withcrafty feel, so I think the classification makes sense.  Note also how the song whose first 4 words are "witchcraft blood and satan" has 99% black metal score.</p>
+<p>Looking at the lyrics, the ones in this group have a more occult, withcrafty feel, so I think the classification makes sense.  Note also how the song whose first 4 words are "witchcraft blood and satan" has 99% black metal score.</p>
 <p>How does this compare with some other well-known black metal bands?  Unlike the more transgressive Mayhem, Immortal (represented by 18 songs in the test dataset) is one of the 28 bands whose songs are all guessed correctly.</p>
 
 </div>
@@ -16930,7 +16930,7 @@ won right need want say cause fucking truth think words look tell
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>My guess would be then that <em>Immortal</em> songs are scored very high on black metalness, i.e. they should have numbers close to 1 as second entries in the <code>probabilities</code> tuples.  Indeed, look at the difference between Mayhem and Immortal:</p>
+<p>My guess would be then that Immortal songs are scored very high on black metalness, i.e. they should have numbers close to 1 as second entries in the <code>probabilities</code> tuples.  Indeed, look at the difference between Mayhem and Immortal:</p>
 
 </div>
 </div>
@@ -18098,7 +18098,7 @@ Test Acc.: 74.46%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Conclusions-and-ToDos">Conclusions and ToDos<a class="anchor-link" href="#Conclusions-and-ToDos">&#182;</a></h2><p>Both LDA and logistic regression seem to perform reasonably well in distinguishing between death and black metal lyrics in a relatively small dataset.  RNNs on the other hand were very prone to overfitting.  It would of course be interesting to see if the accuracy score of the logistic regression classifier would improve when trained on a larger dataset, but given the heterogeneity of the genres and the inconsistency of the labelling it might not be the case.</p>
+<h2 id="Conclusions-and-ToDos">Conclusions and ToDos<a class="anchor-link" href="#Conclusions-and-ToDos">&#182;</a></h2><p>Both LDA and logistic regression seem to perform reasonably well in distinguishing between death and black metal lyrics in a relatively small dataset.  RNNs on the other hand were very prone to overfitting.  It would of course be interesting to see if the accuracy score of the classifier would improve when trained on a larger dataset, but given the heterogeneity of the genres and the inconsistency of the labelling it might not be the case.</p>
 <p>It is however exciting that bands not represented by disproportionately many songs in the training dataset can be correctly labelled, as we saw especially in the case of Immortal and Psycroptic.  Moreover the wrongly labelled songs had lyrics that a human might also struggle labelling correctly without also hearing the music or knowing the band in advance, or where the labelling is in some sense not correct - bands do change direction or are anyway not entirely within one genre or another.</p>
 <p>In the future is would also be interesting to try to distinguish between more metal genres and also non-metal songs.</p>
 
